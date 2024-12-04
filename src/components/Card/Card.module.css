@@ -1,0 +1,10 @@
+.card {
+  margin: 0 auto;
+  padding: 15px;
+  width: 300px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: 1px solid grey;
+  border-radius: 30px;
+  background-color: rgb(245, 245, 245);
+}

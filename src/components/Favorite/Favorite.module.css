@@ -1,0 +1,11 @@
+.favorite_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img {
+  object-fit: contain;
+  width: 24px;
+  height: 24px;
+}

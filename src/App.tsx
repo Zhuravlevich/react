@@ -1,11 +1,9 @@
-import Button from '@/components/button/button';
-import Profile from '@/components/profile/profile';
+import { Card } from '@/components';
 
 const App = () => {
   return (
     <>
-      <Button />
-      <Profile />
+      <Card />
     </>
   );
 };

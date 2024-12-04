@@ -1,0 +1,26 @@
+.price_row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.rate {
+  margin-left: 50px;
+}
+
+.rate_num {
+  color: rgb(243, 208, 12);
+}
+
+.price {
+  font-size: 20px;
+}
+
+.discount {
+  font-weight: 700;
+  padding: 5px;
+  border: 1px solid rgb(252, 133, 133);
+  border-radius: 15px;
+  background-color: rgb(252, 133, 133);
+}
