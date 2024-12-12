@@ -1,0 +1,11 @@
+.container {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,64 @@
+.product {
+  padding: 15px;
+  width: 300px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  border: 1px solid grey;
+  border-radius: 32px;
+  background-color: rgb(246, 246, 246);
+  margin: 20px;
+}
+
+.name {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.favorite_icon {
+  object-fit: contain;
+  width: 26px;
+  height: 26px;
+}
+
+.price_row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rate {
+  margin-left: 50px;
+}
+
+.rate_num {
+  color: rgb(243, 208, 12);
+}
+
+.price {
+  font-size: 20px;
+}
+
+.discount {
+  font-weight: 700;
+  padding: 5px;
+  border: 1px solid rgb(252, 133, 133);
+  border-radius: 15px;
+  background-color: rgb(252, 133, 133);
+}
+
+.product_img {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.favorite_row {
+  margin: 10px 0px 10px 0px;
+  max-height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}

@@ -1,9 +1,12 @@
-import { Card } from '@/components';
+import { ProductCatalog, Layout, Profile } from '@/components';
 
 const App = () => {
   return (
     <>
-      <Card />
+      <Layout>
+        <Profile />
+        <ProductCatalog />
+      </Layout>
     </>
   );
 };
