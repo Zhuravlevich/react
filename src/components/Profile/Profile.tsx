@@ -7,15 +7,17 @@ const Profile = () => {
   };
 
   return (
-    <div className={classes.profileCard}>
-      <img
-        className={classes.img}
-        src="https://ionoto.ru/upload/medialibrary/a1f/tcs61nk83dig738gik8qtkcx6ue7sgek.png"
-        alt="Профиль пользователя"
-      />
-      <p>
-        {user.firstName} {user.lastName}
-      </p>
+    <div className={classes.profileHeader}>
+      <div className={classes.profileCard}>
+        <img
+          className={classes.img}
+          src="https://ionoto.ru/upload/medialibrary/a1f/tcs61nk83dig738gik8qtkcx6ue7sgek.png"
+          alt="Профиль пользователя"
+        />
+        <p>
+          {user.firstName} {user.lastName}
+        </p>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 .container {
-  padding-left: 300px;
-  padding-right: 300px;
+  padding: 0px 300px 0px 300px;
 }
 
 .row {

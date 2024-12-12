@@ -9,10 +9,15 @@ type ProductProps = {
 const ProductCard: FC<ProductProps> = (props) => {
   const { product } = props;
 
+  const handleClick = () => {
+    alert(`Товар "${product.name}" добавлен в корзину`);
+    product.isFavorite = !product.isFavorite;
+  };
+
   let favoriteIcon;
   if (product.isFavorite) {
     favoriteIcon = (
-      <div className={classes.favorite_row}>
+      <div onClick={handleClick} className={classes.favorite_row}>
         <div>Убрать из избранного</div>
         <img
           className={classes.favorite_icon}
@@ -23,7 +28,7 @@ const ProductCard: FC<ProductProps> = (props) => {
     );
   } else {
     favoriteIcon = (
-      <div className={classes.favorite_row}>
+      <div onClick={handleClick} className={classes.favorite_row}>
         <div>Добавить в избранное</div>
         <img
           className={classes.favorite_icon}
@@ -37,7 +42,7 @@ const ProductCard: FC<ProductProps> = (props) => {
   return (
     <div className={classes.product}>
       <div className={classes.name}>{product.name}</div>
-      <div>
+      <div className={classes.product_img_container}>
         <img
           className={classes.product_img}
           src={product.imageUrl}

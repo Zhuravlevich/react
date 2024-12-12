@@ -1,9 +1,12 @@
+.profileHeader {
+  min-height: 100px;
+  padding: 0px 300px 0px 300px;
+}
+
 .profileCard {
   display: flex;
   align-items: center;
-  margin: 0 auto;
   width: 250px;
-  margin-bottom: 50px;
   font-family: 'Montserrat', sans-serif;
 }
 

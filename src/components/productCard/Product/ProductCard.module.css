@@ -46,12 +46,17 @@
   background-color: rgb(252, 133, 133);
 }
 
-.product_img {
-  display: flex;
-  width: 80%;
-  align-items: center;
-  margin: 0 auto;
+.product_img_container {
+  width: 300px;
+  height: 250px;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.product_img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .favorite_row {
