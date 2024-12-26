@@ -1,12 +1,9 @@
-import { ProductCatalog, Layout, Profile } from '@/components';
+import { CatalogPage } from './components';
 
 const App = () => {
   return (
     <>
-      <Layout>
-        <Profile />
-        <ProductCatalog />
-      </Layout>
+      <CatalogPage />
     </>
   );
 };

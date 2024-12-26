@@ -1,24 +1,39 @@
 import { Product } from '@/components/types/product';
 import classes from './ProductCard.module.css';
 import { FC } from 'react';
+import ChangeCount from '@/components/productCard/Product/components/ChangeCount/ChangeCount';
 
 type ProductProps = {
   product: Product;
+  onChangeCard: (product: Product) => void;
 };
 
-const ProductCard: FC<ProductProps> = (props) => {
-  const { product } = props;
+const ProductCard: FC<ProductProps> = ({ product, onChangeCard }) => {
+  const handleAddCard = () => {
+    onChangeCard({
+      ...product,
+      count: product.count ? product.count + 1 : 1,
+    });
+  };
+
+  const handleDecrementCard = () => {
+    onChangeCard({
+      ...product,
+      count: product.count && product.count > 0 ? product.count - 1 : 0,
+    });
+  };
 
   const handleClick = () => {
-    alert(`Товар "${product.name}" добавлен в корзину`);
-    product.isFavorite = !product.isFavorite;
+    onChangeCard({
+      ...product,
+      isFavorite: !product.isFavorite,
+    });
   };
 
   let favoriteIcon;
   if (product.isFavorite) {
     favoriteIcon = (
-      <div onClick={handleClick} className={classes.favorite_row}>
-        <div>Убрать из избранного</div>
+      <div onClick={handleClick}>
         <img
           className={classes.favorite_icon}
           src="https://img.icons8.com/fluency-systems-filled/50/like.png"
@@ -28,8 +43,7 @@ const ProductCard: FC<ProductProps> = (props) => {
     );
   } else {
     favoriteIcon = (
-      <div onClick={handleClick} className={classes.favorite_row}>
-        <div>Добавить в избранное</div>
+      <div onClick={handleClick} className={classes.favorite_icon_row}>
         <img
           className={classes.favorite_icon}
           src="https://img.icons8.com/fluency-systems-regular/48/like--v1.png"
@@ -56,7 +70,19 @@ const ProductCard: FC<ProductProps> = (props) => {
           Рейтинг: <span className={classes.rate_num}>{product.rating}</span>
         </div>
       </div>
-      {favoriteIcon}
+      <div className={classes.favorite_row}>
+        <div onClick={handleAddCard} className={classes.favorite_button}>
+          Добавить в корзину
+        </div>
+        {product.count && product.count > 0 ? (
+          <ChangeCount
+            count={product.count}
+            onAdd={handleAddCard}
+            onDecrement={handleDecrementCard}
+          />
+        ) : null}
+        {favoriteIcon}
+      </div>
     </div>
   );
 };

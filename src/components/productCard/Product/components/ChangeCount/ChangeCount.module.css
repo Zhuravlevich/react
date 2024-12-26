@@ -1,0 +1,10 @@
+.counter {
+  display: flex;
+  width: 50px;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.counter_btn {
+  cursor: pointer;
+}

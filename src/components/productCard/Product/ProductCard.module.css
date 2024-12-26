@@ -18,6 +18,11 @@
   object-fit: contain;
   width: 26px;
   height: 26px;
+  cursor: pointer;
+}
+
+.favorite_button {
+  cursor: pointer;
 }
 
 .price_row {
@@ -65,5 +70,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
 }

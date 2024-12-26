@@ -1,0 +1,11 @@
+.cart_item {
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  max-width: 50%;
+}
+
+.cart_delete_btn {
+  cursor: pointer;
+}
