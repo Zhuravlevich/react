@@ -4,12 +4,12 @@ import { Product } from '../types/product';
 
 type ProductCatalogProps = {
   products: Array<Product>;
-  setProducts: React.Dispatch<React.SetStateAction<Product[]>>;
+  dispatch: React.Dispatch<React.SetStateAction<Product[]>>;
 };
 
-const ProductCatalog = ({ products, setProducts }: ProductCatalogProps) => {
+const ProductCatalog = ({ products, dispatch }: ProductCatalogProps) => {
   const handleChangeCard = (product: Product) => {
-    setProducts((prev) => {
+    dispatch((prev) => {
       return prev.map((item) => {
         if (item.id == product.id) {
           return product;

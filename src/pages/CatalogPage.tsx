@@ -1,11 +1,10 @@
 import ProductCatalog from '@/components/ProductCatalog/Product.catalog';
 import Layout from '@/components/Layout/Layout';
-
-import { useState } from 'react';
 import { Product } from '@/components/types/product';
+import { useState } from 'react';
 
 const CatalogPage = () => {
-  const [products, setProducts] = useState<Array<Product>>([
+  const [products, dispatch] = useState<Array<Product>>([
     {
       id: 1,
       name: 'Наручные часы мужские SKMEI 1251',
@@ -77,7 +76,7 @@ const CatalogPage = () => {
   return (
     <Layout>
       <section>
-        <ProductCatalog products={products} setProducts={setProducts} />
+        <ProductCatalog products={products} dispatch={dispatch} />
       </section>
     </Layout>
   );
