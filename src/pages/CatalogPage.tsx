@@ -2,9 +2,10 @@ import ProductCatalog from '@/components/ProductCatalog/Product.catalog';
 import Layout from '@/components/Layout/Layout';
 import { Product } from '@/components/types/product';
 import { useState } from 'react';
+import { useImmerReducer } from 'use-immer';
 
 const CatalogPage = () => {
-  const [products, dispatch] = useState<Array<Product>>([
+  const [products, dispatch] = useImmerReducer<Array<Product>>([
     {
       id: 1,
       name: 'Наручные часы мужские SKMEI 1251',
